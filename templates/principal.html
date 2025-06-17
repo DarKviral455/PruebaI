@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+    <link rel="stylesheet" href="static/estilos.css">
+</head>
+<body>
+    <header>ARTES PERUANOS</header>
+    
+    <div class="barra">
+        <div class="contenedor">
+            <button class="boton">OPCIONES ▼</button>
+            <div class="menu">
+                <a href="{{ url_for('InsertarCartera') }}">Registrar Cartera</a>
+                <a href="{{ url_for('ConsultarCartera') }}">Consultar Cartera</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #deeeff; 
+}
+header {
+    background-color: #003f7e;
+    color: white;
+    padding: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+.barra {
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.contenedor {
+    position: relative;
+}
+.contenedor:hover .menu {
+    display: block;
+}
+.boton {
+    background-color: transparent;
+    border: none;
+    color: #033e79;
+    font-size: 16px;
+    padding: 12px;
+}
+.boton:hover,
+.boton:focus {
+    background-color: #cce0ff;
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+.menu a {
+    color: #003366;
+    padding: 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+.menu a:hover {
+    background-color: #cce0ff;
+}
+.fondo {
+    background-color: white;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.encabezado {
+    background-color: #164e8a;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fcfdff;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #022c69;
+}
+input, select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #d4eaff;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.botones {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.botones button {
+    background-color: #164e8a;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    width: 150px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+.botones button:hover {
+    background-color: #6da6e4;
+}
+.mensaje {
+    background-color: #fad7d7;
+    color: #c70202;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #fad7d7;
+    border-radius: 6px;
+}
+table.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    text-align: center;
+}
+table.tabla thead th {
+    background-color: #164e8a;
+    padding: 10px; 
+    font-size: 14px;
+    color: white;
+}
+table.tabla td {
+    border: 1px solid #164e8a;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgb(247, 248, 252);
+}
+.fondoL {
+    background-color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

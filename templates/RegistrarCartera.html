@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Cartera</title>
+    <link rel="stylesheet" href="static/estilos.css">
+</head>
+<body>
+    <header>ARTES PERUANOS</header>
+
+    <div class="fondo">
+        <div class="encabezado">Grabar Datos de las Carteras</div>
+        <form method="POST">
+            <label>Descripción</label>
+            <input type="text" name="txtdescription" required>
+            <label>Tipo</label>
+            <select name="txttipocartera" required>
+                <option value="">------------------------------------------------------------------------------------------------------------------------------------------------------</option>
+                {% for tipo in tipos %}
+                <option value="{{ tipo[0] }}">{{ tipo[1] }}</option>
+                {% endfor %}
+            </select>
+            <label>Precio</label>
+            <input type="number" name="txtprecio" step="0.01" required>
+            <label>Fecha</label>
+            <input type="date" name="fecha" required>
+            <div class="botones">
+                <button type="submit">Guardar</button>
+                <button type="button" onclick="window.location.href='{{ url_for('principal') }}'">Regresar</button>
+            </div>
+            {% if mensaje %}
+            <div class="mensaje">{{ mensaje }}</div>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

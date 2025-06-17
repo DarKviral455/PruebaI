@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Cartera</title>
+    <link rel="stylesheet" href="static/estilos.css">
+</head>
+<body>
+    <header>ARTES PERUANOS</header>
+
+    <div class="fondo">
+        <div class="encabezado">Listado de Carteras Hechas a Mano</div>
+
+        <form method="POST">
+            <label>Tipo de Cartera</label>
+            <select name="txttipocartera" required>
+                <option value="">------------------------------------------------------------------------------------------------------------------------------------------------------</option>
+                {% for tipo in tipos %}
+                <option value="{{ tipo[0] }}">{{ tipo[1] }}</option>
+                {% endfor %}
+            </select>
+            <div class="botones">
+                <button type="submit">Buscar</button>
+            </div>
+        </form>
+
+        {% if cartera %}
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Código Cartera</th>
+                    <th>Descripción</th>
+                    <th>Tipo Cartera</th>
+                    <th>Precio</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in cartera %}
+                <tr>
+                    <td>{{ c[0] }}</td>
+                    <td>{{ c[1] }}</td>
+                    <td>{{ c[2] }}</td>
+                    <td>s/{{ c[3] }}</td>
+                    <td>{{ c[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        <div class="botones">
+            <form action="{{ url_for('principal') }}">
+                <button type="submit">Regresar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

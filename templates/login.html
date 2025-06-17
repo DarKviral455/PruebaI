@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/estilos.css">
+</head>
+<body>
+    <header>ARTES PERUANOS</header>
+    <div class="fondoL">
+        <div class="encabezado">¡BIENVENIDO!</div>
+        <form method="POST">
+            <label>Usuario</label>
+            <input type="text" name="usuario" required>
+            <label>Contraseña</label>
+            <input type="password" name="clave" required>
+            <div class="botones">
+                <button type="submit">Ingresar</button>
+            </div>
+            {% if error %}
+            <div class="mensaje">{{ error }}</div>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
